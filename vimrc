@@ -89,6 +89,8 @@ set showcmd " show command in bottom bar
 set cursorline " highlight current line
 set wildmenu " visual autocomplete for command menu
 set showmatch " highlight matching parenthesis
+set colorcolumn=80
+set textwidth=79
 
 " Search
 set incsearch  " search as you type
@@ -96,7 +98,7 @@ set hlsearch  " highlight matches
 nnoremap <leader><space> :nohlsearch<CR>  " turn off search highlight (leader is backslash)
 
 " Folding
-set foldenable  "enable folding
+set foldenable  " enable folding
 set foldlevelstart=10  " open all folds up to level 10 initially
 
 " Moving
