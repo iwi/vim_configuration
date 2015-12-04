@@ -1,7 +1,9 @@
-" iwi's configuration
+""""" iwi's configuration
+""
+""
+""
 
 " Vundle configuration based on https://github.com/VundleVim/Vundle.vim
-
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -29,6 +31,7 @@ Plugin 'editorconfig/editorconfig-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
+
 filetype plugin indent on    " required
 
 " Brief help
@@ -38,8 +41,9 @@ filetype plugin indent on    " required
 " :PluginSearch foo - searches for foo; append `!` to refresh local cache
 " :PluginClean      - confirms removal of unused plugins; append `!` to
 "auto-approve removal
-
 " see :h vundle for more details or wiki for FAQ
+
+
 
 " python auto complete (not working)
 let g:pydiction_location='~/.vim/bundle/pydiction/complete-dic'
