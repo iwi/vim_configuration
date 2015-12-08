@@ -22,6 +22,9 @@ Plugin 'bling/vim-airline'
 " EditorConfig plugin
 Plugin 'editorconfig/editorconfig-vim' 
 
+" Jedi python plugin
+Plugin 'davidhalter/jedi-vim'
+
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
 "Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
@@ -127,7 +130,6 @@ inoremap jk <esc>
 inoremap fj  <-
 
 " Autocomplete
-imap <Tab> <C-P>
 set complete=.,b,u,]
 set wildmode=longest,list:longest
 set wildignore+=*.git,*.jpg
