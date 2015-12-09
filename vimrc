@@ -48,21 +48,6 @@ filetype plugin indent on    " required
 
 
 
-" python auto complete (not working)
-let g:pydiction_location='~/.vim/bundle/pydiction/complete-dic'
-let g:pdyction_menu_height = 4
-
-" airline configuration
-if !exists('g:airline_symbols')                                   
-  let g:airline_symbols = {}
-endif
-let g:airline_left_sep = '▶' "test, 
-
-" EditorConfig settings
-let g:EditorConfig_ma_line_indicator = "fill"
-
-
-
 
 """ non-plugin configuration
 
@@ -84,6 +69,8 @@ set softtabstop=2  " number of spaces in tab when editing
  " Hitting F5 will clean out all trailing whitespace or tabs
 nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>:retab<CR>
 
+" indentation 
+let g:EditorConfig_ma_line_indicator = "fill"
 set smartindent
 
 " UI layout
@@ -94,6 +81,11 @@ set wildmenu " visual autocomplete for command menu
 set showmatch " highlight matching parenthesis
 set colorcolumn=80
 set textwidth=79
+if !exists('g:airline_symbols')                                   
+  let g:airline_symbols = {}
+endif
+let g:airline_left_sep = '▶' "test, 
+
 
 " Search
 set incsearch  " search as you type
@@ -121,6 +113,7 @@ set splitbelow
 set splitright
 
 " resizing splits
+set modifiable
 nnoremap <C-=> <C-W><C-=>
 
 " jk is escape
@@ -130,6 +123,8 @@ inoremap jk <esc>
 inoremap fj  <-
 
 " Autocomplete
+let g:jedi#completions_command = "<leader>m"  " default was C-<space>
+let g:jedi#popup_on_dot = 0  " the period autocomplete didn't work well
 set complete=.,b,u,]
 set wildmode=longest,list:longest
 set wildignore+=*.git,*.jpg
