@@ -119,6 +119,9 @@ nnoremap <C-=> <C-W><C-=>
 " jk is escape
 inoremap jk <esc>
 
+" mouse to go to position
+set mouse=a
+
 " R assignment fj is <-
 inoremap fj  <-
 
@@ -128,3 +131,5 @@ let g:jedi#popup_on_dot = 0  " the period autocomplete didn't work well
 set complete=.,b,u,]
 set wildmode=longest,list:longest
 set wildignore+=*.git,*.jpg
+
+
