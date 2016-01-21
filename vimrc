@@ -59,7 +59,7 @@ set fileencoding=utf-8
 syntax enable
 
 " colorscheme
-colorscheme teaspoon
+colorscheme stonespoon 
 
 " spaces and tabs
 set modeline
