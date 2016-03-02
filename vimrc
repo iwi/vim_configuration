@@ -101,6 +101,9 @@ set foldlevelstart=10  " open all folds up to level 10 initially
 nnoremap j gj
 nnoremap k gk
 
+"backspace
+set backspace=indent,eol,start
+
 " Splits
 " move between splits
 nnoremap <C-J> <C-W><C-J>
