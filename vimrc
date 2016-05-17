@@ -35,6 +35,8 @@ Plugin 'davidhalter/jedi-vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
+
+filetype plugin on  "this is for nvim-r to work
 filetype plugin indent on    " required
 
 " Brief help
