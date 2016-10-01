@@ -25,6 +25,17 @@ Plugin 'editorconfig/editorconfig-vim'
 " Jedi python plugin
 Plugin 'davidhalter/jedi-vim'
 
+
+" N-vim-r
+Plugin 'jalvesaq/Nvim-R'
+let R_tmux_split = 1
+
+" fzf plugin
+Plugin 'junegunn/fzf'
+
+" csv.vim
+Plugin 'chrisbra/csv.vim'
+
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
 "Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
@@ -36,7 +47,7 @@ Plugin 'davidhalter/jedi-vim'
 call vundle#end()            " required
 
 
-filetype plugin on  "this is for nvim-r to work
+filetype plugin on  "this is for nvim-r and csv.vim to work
 filetype plugin indent on    " required
 
 " Brief help
@@ -136,5 +147,3 @@ let g:jedi#popup_on_dot = 0  " the period autocomplete didn't work well
 set complete=.,b,u,]
 set wildmode=longest,list:longest
 set wildignore+=*.git,*.jpg
-
-
