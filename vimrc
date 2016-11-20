@@ -7,13 +7,13 @@ filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
+
+" Keep Plugin commands between vundle#begin/end.
 call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-
-" Keep Plugin commands between vundle#begin/end.
 
 "" Helpers
 Plugin 'tpope/vim-sensible'
@@ -39,7 +39,6 @@ Plugin 'chriskempson/tomorrow-theme', {'rtp': '/vim'}
 Plugin 'joshdick/onedark.vim'
 Plugin 'gosukiwi/vim-atom-dark'
 
-
 "" Languages
 Plugin 'sheerun/vim-polyglot'
 Plugin 'junegunn/goyo.vim', {'for': 'markdown'}
@@ -50,7 +49,6 @@ Plugin 'docker/docker', { 'rtp': '/contrib/syntax/vim' }
 Plugin 'jalvesaq/Nvim-R'
 let R_tmux_split = 1
 imap <C-P> <Plug>RCompleteArgs
-
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
