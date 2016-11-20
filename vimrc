@@ -1,7 +1,5 @@
 """"" iwi's configuration
 ""
-""
-""
 
 " Vundle configuration based on https://github.com/VundleVim/Vundle.vim
 set nocompatible              " be iMproved, required
@@ -14,34 +12,45 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
+
 " Keep Plugin commands between vundle#begin/end.
 
-" airline plugin
+"" Helpers
+Plugin 'tpope/vim-sensible'
+"Plugin 'Shougo/vimproc.vim' { 'do': 'make'}
+"Plugin 'Shougo/vimshell.vim'
+Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-surround'
+Plugin 'Raimondi/delimitMate'
 Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf.vim'
+Plugin 'editorconfig/editorconfig-vim'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'kshenoy/vim-signature'
 
-" EditorConfig plugin
-Plugin 'editorconfig/editorconfig-vim' 
+" colorschemes
+Plugin 'junegunn/limelight.vim'
+Plugin 'arnau/teaspoon.vim'
+Plugin 'arnau/stonespoon.vim'
+Plugin 'chriskempson/tomorrow-theme', {'rtp': '/vim'}
+Plugin 'joshdick/onedark.vim'
+Plugin 'gosukiwi/vim-atom-dark'
 
-" Jedi python plugin
-Plugin 'davidhalter/jedi-vim'
 
+"" Languages
+Plugin 'sheerun/vim-polyglot'
+Plugin 'junegunn/goyo.vim', {'for': 'markdown'}
+Plugin 'chrisbra/csv.vim'
+Plugin 'docker/docker', { 'rtp': '/contrib/syntax/vim' }
 
 " N-vim-r
 Plugin 'jalvesaq/Nvim-R'
 let R_tmux_split = 1
+imap <C-P> <Plug>RCompleteArgs
 
-" fzf plugin
-Plugin 'junegunn/fzf'
-
-" csv.vim
-Plugin 'chrisbra/csv.vim'
-
-" The sparkup vim script is in a subdirectory of this repo called vim.
-" Pass the path to set the runtimepath properly.
-"Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-
-" Avoid a name conflict with L9
-"Plugin 'user/L9', {'name': 'newL9'}
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -59,91 +68,5 @@ filetype plugin indent on    " required
 "auto-approve removal
 " see :h vundle for more details or wiki for FAQ
 
+source ~/.vim/basics.vim
 
-
-
-""" non-plugin configuration
-
-" encoding
-set encoding=utf-8
-set fileencoding=utf-8
-
-" sintax highlight
-syntax enable
-
-" colorscheme
-colorscheme stonespoon 
-
-" spaces and tabs
-set modeline
-set tabstop=2  " number of visual spaces per tab
-set expandtab  " tabs to spaces
-set softtabstop=2  " number of spaces in tab when editing
- " Hitting F5 will clean out all trailing whitespace or tabs
-nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>:retab<CR>
-
-" indentation 
-let g:EditorConfig_ma_line_indicator = "fill"
-set smartindent
-
-" UI layout
-set number " show line numbers
-set showcmd " show command in bottom bar
-set cursorline " highlight current line
-set wildmenu " visual autocomplete for command menu
-set showmatch " highlight matching parenthesis
-set colorcolumn=80
-set textwidth=79
-if !exists('g:airline_symbols')                                   
-  let g:airline_symbols = {}
-endif
-let g:airline_left_sep = '▶' "test, 
-
-
-" Search
-set incsearch  " search as you type
-set hlsearch  " highlight matches
-nnoremap <leader><space> :nohlsearch<CR>  " turn off search highlight (leader is backslash)
-
-" Folding
-set foldenable  " enable folding
-set foldlevelstart=10  " open all folds up to level 10 initially
-
-" Moving
-" move vertically by visual line
-nnoremap j gj
-nnoremap k gk
-
-"backspace
-set backspace=indent,eol,start
-
-" Splits
-" move between splits
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
-
-" add splits below and to the right of the current one
-set splitbelow
-set splitright
-
-" resizing splits
-set modifiable
-nnoremap <C-=> <C-W><C-=>
-
-" jk is escape
-inoremap jk <esc>
-
-" mouse to go to position
-set mouse=a
-
-" R assignment fj is <-
-inoremap fj  <-
-
-" Autocomplete
-let g:jedi#completions_command = "<leader>m"  " default was C-<space>
-let g:jedi#popup_on_dot = 0  " the period autocomplete didn't work well
-set complete=.,b,u,]
-set wildmode=longest,list:longest
-set wildignore+=*.git,*.jpg
