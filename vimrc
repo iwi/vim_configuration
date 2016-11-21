@@ -1,4 +1,4 @@
-""""" iwi's configuration
+"""" iwi's configuration
 ""
 
 " Vundle configuration based on https://github.com/VundleVim/Vundle.vim

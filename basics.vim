@@ -20,7 +20,7 @@ nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>:
 " UI layout
 set number  " show line numbers
 set visualbell t_vb=
-set paste
+"set paste  " it seems this deactivates other stuff!
 set relativenumber
 set showcmd  " show command in bottom bar
 set cursorline  " highlight current line
@@ -75,19 +75,19 @@ noremap <Leader>te :tabedit <C-R>=expand("%:p:h") . "/" <CR>
 
 " Moving
 " move vertically by visual line
-nnoremap j gj
-nnoremap k gk
+noremap j gj
+noremap k gk
 
 " Splits
 " move between splits
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
+noremap <C-J> <C-W><C-J>
+noremap <C-K> <C-W><C-K>
+noremap <C-L> <C-W><C-L>
+noremap <C-H> <C-W><C-H>
 
 " add splits below and to the right of the current one ---- review
-" set splitbelow
-" set splitright
+set splitbelow
+set splitright
 
 " resizing splits
 set modifiable
