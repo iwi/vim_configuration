@@ -1,5 +1,7 @@
 """ non-plugin configuration
 
+let g:maplocalleader = ","
+
 " encoding - review needed
 " set fileencoding=utf-8
 
@@ -118,3 +120,9 @@ let g:airline_left_sep = '▶' "test,
 let g:jedi#completions_command = "<leader>m"  " default was C-<space>
 let g:jedi#popup_on_dot = 0  " the period autocomplete didn't work well
 
+
+" Mappings
+
+nnoremap <LocalLeader>f :Files<CR>
+nnoremap <LocalLeader>b :Buffers<CR>
+nnoremap <LocalLeader>s :Ag<CR>
