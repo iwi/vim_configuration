@@ -38,6 +38,13 @@ Plugin 'arnau/stonespoon.vim'
 Plugin 'chriskempson/tomorrow-theme', {'rtp': '/vim'}
 Plugin 'joshdick/onedark.vim'
 Plugin 'gosukiwi/vim-atom-dark'
+Plugin 'tomasr/molokai'
+Plugin 'vim-scripts/Wombat'
+Plugin 'zaki/zazen'
+Plugin 'kamwitsta/mythos'
+Plugin 'KeitaNakamura/neodark.vim'
+Plugin 'xero/blaquemagick.vim'
+Plugin 'jacoborus/tender.vim'
 
 "" Languages
 Plugin 'sheerun/vim-polyglot'
