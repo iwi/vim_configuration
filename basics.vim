@@ -103,6 +103,9 @@ nnoremap <C-=> <C-W><C-=>
 " jk is escape
 inoremap jk <esc>
 
+let R_assign_map = "<M-->"
+inoremap <LocalLeader>-  <- 
+inoremap <LocalLeader>m %>%
 
 " mouse to go to position
 set mouse=a
@@ -131,3 +134,7 @@ let g:jedi#popup_on_dot = 0  " the period autocomplete didn't work well
 nnoremap <LocalLeader>f :Files<CR>
 nnoremap <LocalLeader>b :Buffers<CR>
 nnoremap <LocalLeader>s :Ag<CR>
+
+
+" comments for R
+autocmd FileType r setlocal commentstring=#\ %s

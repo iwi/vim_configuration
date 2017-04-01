@@ -1,5 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_cnt =9
 let g:netrw_dirhist_1='/home/iwi/.config'
 let g:netrw_dirhist_2='/home/iwi/.vim'
 let g:netrw_dirhist_3='/home/iwi/projectes/githubio/iwi.github.io/_layouts'
@@ -8,3 +8,4 @@ let g:netrw_dirhist_5='/home/iwi/.vim/bundle/Nvim-R'
 let g:netrw_dirhist_6='/home/iwi/.config'
 let g:netrw_dirhist_7='/home/iwi/projectes/linkatos/linkatos'
 let g:netrw_dirhist_8='/home/iwi/projectes/multilevel_modelling_gelman_hill'
+let g:netrw_dirhist_9='/home/iwi/projectes/stan-survival-shrinkage'
