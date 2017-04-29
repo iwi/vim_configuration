@@ -30,7 +30,9 @@ Plugin 'junegunn/fzf.vim'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'kshenoy/vim-signature'
-Plugin 'w0rp/ale'
+" Plugin 'w0rp/ale'
+Plugin 'scrooloose/nerdtree'
+Plugin 'Shougo/neocomplete.vim'
 
 " colorschemes
 Plugin 'junegunn/limelight.vim'
@@ -76,14 +78,16 @@ nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
 let g:ale_statusline_format = ['⨉ %d', '⚠ %d', '⬥ ok']
-" let g:ale_lint_on_text_changed = 'never'
-" let g:ale_lint_on_enter = 0
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_lint_on_enter = 0
 " let g:ale_open_list = 1
 " Pick and choose linters
-"let g:ale_linters = {
-" \   'text': [],
-" \   'vim': [],
-" \}]]]]]]
+let g:ale_linters = {
+\   'python': ['pylint'],
+\   'text': [],
+\   'vim': [],
+\}
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
@@ -101,4 +105,3 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 
 source ~/.vim/basics.vim
-
