@@ -60,9 +60,17 @@ Plugin 'chrisbra/csv.vim'
 Plugin 'docker/docker', { 'rtp': '/contrib/syntax/vim' }
 
 " N-vim-r
+Plugin 'roxma/nvim-completion-manager'
 Plugin 'jalvesaq/Nvim-R'
-let R_tmux_split = 1
-imap <C-P> <Plug>RCompleteArgs
+" let R_tmux_split = 1
+" imap <C-P> <Plug>RCompleteArgs
+Plugin 'gaalcaras/ncm-R'
+
+if !has('nvim')
+    Plug 'roxma/vim-hug-neovim-rpc'
+endif
+
+Plugin 'sirver/UtilSnips'
 
 " ale config
 filetype off
