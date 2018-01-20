@@ -32,7 +32,11 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'kshenoy/vim-signature'
 " Plugin 'w0rp/ale'
 Plugin 'scrooloose/nerdtree'
-Plugin 'Shougo/neocomplete.vim'
+" Plugin 'Shougo/neocomplete.vim'
+" Plugin 'klen/python-mode'
+" Plugin 'vim-pandoc/vim-pandoc'
+" Plugin 'vim-pandoc/vim-pandoc-syntax'
+Plugin 'davidhalter/jedi-vim'
 
 " colorschemes
 Plugin 'junegunn/limelight.vim'

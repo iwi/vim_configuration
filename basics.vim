@@ -116,7 +116,9 @@ set wildmode=list:longest,list:full
 set wildignore+=*.git,*.jpg,*.swp
 set completeopt=menu,preview
 
-
+" Display extra white space
+set showbreak=..
+set list listchars=tab:→\ ,trail:\ ,eol:¬
 
 
 if !exists('g:airline_symbols')
