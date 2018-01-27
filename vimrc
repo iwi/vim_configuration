@@ -58,7 +58,7 @@ Plugin 'docker/docker', { 'rtp': '/contrib/syntax/vim' }
 " N-vim-r
 Plugin 'jalvesaq/Nvim-R'
 let R_tmux_split = 1
-imap <C-P> <Plug>RCompleteArgs
+" imap <C-P> <Plug>RCompleteArgs
 
 " ale config
 filetype off
