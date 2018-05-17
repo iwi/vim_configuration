@@ -60,9 +60,30 @@ Plugin 'chrisbra/csv.vim'
 Plugin 'docker/docker', { 'rtp': '/contrib/syntax/vim' }
 
 " N-vim-r
-Plugin 'roxma/nvim-completion-manager'
+" Plugin 'roxma/vim-hug-neovim-rpc'
+" Plugin 'roxma/nvim-completion-manager'
 Plugin 'jalvesaq/Nvim-R'
 let R_tmux_split = 1
+
+" Plugin 'gaalcaras/ncm-R'
+
+" Markdown visualiser
+function! BuildComposer(info)
+  if a:info.status != 'unchanged' || a:info.force
+    if has('nvim')
+      !cargo build --release
+    else
+      !cargo build --release --no-default-features --features json-rpc
+    endif
+  endif
+endfunction
+
+Plugin 'euclio/vim-markdown-composer', { 'do': function('BuildComposer') }
+
+
+
+
+" Vim 8 only
 
 " ale config
 filetype off
