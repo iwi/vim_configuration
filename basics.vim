@@ -140,3 +140,8 @@ nnoremap <LocalLeader>s :Ag<CR>
 
 " comments for R
 autocmd FileType r setlocal commentstring=#\ %s
+
+
+"spell check
+" set spell spelllang=en_gb
+hi SpellBad cterm=inverse

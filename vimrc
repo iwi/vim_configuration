@@ -65,6 +65,9 @@ Plugin 'docker/docker', { 'rtp': '/contrib/syntax/vim' }
 Plugin 'jalvesaq/Nvim-R'
 let R_tmux_split = 1
 
+" Elm
+Plugin 'elmcast/elm-vim'
+
 " Plugin 'gaalcaras/ncm-R'
 
 " Markdown visualiser
