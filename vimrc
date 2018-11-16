@@ -66,6 +66,7 @@ Plugin 'jalvesaq/Nvim-R'
 let R_tmux_split = 1
 
 " Elm
+let g:polyglot_disabled = ['elm']
 Plugin 'elmcast/elm-vim'
 
 " Plugin 'gaalcaras/ncm-R'
