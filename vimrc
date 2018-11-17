@@ -1,4 +1,4 @@
-"""" iwi's configuration
+"""" iwi configuration
 ""
 
 " Vundle configuration based on https://github.com/VundleVim/Vundle.vim
@@ -56,20 +56,21 @@ Plugin 'jacoborus/tender.vim'
 "" Languages
 Plugin 'sheerun/vim-polyglot'
 Plugin 'junegunn/goyo.vim', {'for': 'markdown'}
-Plugin 'chrisbra/csv.vim'
+Plugin 'chrisbra/csv.vim', {'for': 'csv'}
 Plugin 'docker/docker', { 'rtp': '/contrib/syntax/vim' }
+Plugin 'elmcast/elm-vim'
+Plugin 'jalvesaq/Nvim-R'
 
 " N-vim-r
-" Plugin 'roxma/vim-hug-neovim-rpc'
-" Plugin 'roxma/nvim-completion-manager'
-Plugin 'jalvesaq/Nvim-R'
 let R_tmux_split = 1
 
 " Elm
-let g:polyglot_disabled = ['elm']
-Plugin 'elmcast/elm-vim'
+" let g:polyglot_disabled = ['elm']
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
 
-" Plugin 'gaalcaras/ncm-R'
+" let g:elm_syntastic_show_warnings = 1
+
 
 " Markdown visualiser
 function! BuildComposer(info)
