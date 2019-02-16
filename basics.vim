@@ -10,8 +10,6 @@ set t_Co=256
 set termguicolors
 set t_8f=[38;2;%lu;%lu;%lum
 set t_8b=[48;2;%lu;%lu;%lum
-" colorscheme atom-dark-256
-colorscheme molokai
 
 " spaces and tabs
 set tabstop=2  " number of visual spaces per tab
@@ -120,6 +118,10 @@ set completeopt=menu,preview
 set showbreak=..
 set list listchars=tab:→\ ,trail:\ ,eol:¬
 
+
+" Move visual selection
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
 
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
